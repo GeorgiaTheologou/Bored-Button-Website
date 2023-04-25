@@ -116,8 +116,7 @@ replayBtn.onclick = ()=>{
 //For the red button function
 var randomlinks = [];
 
- randomlinks[0]="TicTacToeGame.html"
- //randomlinks[1]=""
+ randomlinks[0]="MemoryGame.html"
  //randomlinks[2]=""
  //randomlinks[3]=""
  

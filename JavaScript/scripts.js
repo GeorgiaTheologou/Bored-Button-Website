@@ -1,3 +1,4 @@
+//-----------------------------------------------------------Toggle Button Menu--------------------------------------------------------------
 const toggleButton = document.getElementsByClassName('toggle-button')[0]
 const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
@@ -12,7 +13,7 @@ doneButton.addEventListener('click', () => {
   alert(`${selectedValue}.`);
 });
 
-//For the red button function
+//-----------------------------------------------------------Rn Menu--------------------------------------------------------------
 var randomlinks = [];
 
  randomlinks[0]="TicTacToeGame.html"
