@@ -49,6 +49,8 @@ body {
     background-color: #52c8df;
 }
 
+/*toggle button for menu*/
+
 .toggle-button {
     position: absolute;
     top: .75rem;
@@ -67,14 +69,48 @@ body {
     border-radius: 10px;
 }
 
-/*Main Body of the website*/
+/*------------------------------------------------Main Body of the website----------------------------------------------------*/
 .main {
-    flex-direction: row;
     display: flex;
     flex-grow: 1;
 }
 
-.main .column {
+.main .column1 {
+    width: 35%;
+    height: 100%;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 150px 10px;
+    flex-direction: column;
+}
+
+.main .column1 .boredomLevel {
+    width: 60%;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.main .column1 .doneButton {
+    background-color: #008CBA;
+    font-size: 20px;
+    border-radius: 12px;
+    color: aliceblue;
+    margin-top: 10px;
+    border: 2px solid #9de3fa; 
+}
+
+.doneButton:hover {
+    background-color:  #9de3fa; 
+    color: white;
+  }
+    
+.main .column1 label {
+    font-size: 20px;
+}
+
+.main .column2 {
     width: 35%;
     height: 100%;
     justify-content: center;
@@ -82,6 +118,15 @@ body {
     padding: 150px 10px;
 }
 
+.main .column3 {
+    width: 35%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 150px 10px;
+}
+
+/*Red Button Styling*/
 .boredButton {
     background-color: #f44336;
     font-size: 50px;
@@ -106,13 +151,13 @@ body {
 
 .introText {
     color: #000000;
-    size: 20px;
+    font-size: 30px;
     text-align: center;
     text-shadow: #666;
 }
   
 
-/*Media Queries to handle different screen types*/
+/*-------------------------------------------Media Queries to handle different screen types---------------------------------------------------*/
 @media (max-width: 800px) {
     .navbar {
         flex-direction: column;
