@@ -70,12 +70,12 @@ body {
 }
 
 /*------------------------------------------------Main Body of the website----------------------------------------------------*/
-.main {
+.mainHome {
     display: flex;
     flex-grow: 1;
 }
 
-.main .column1 {
+.mainHome .column1 {
     width: 35%;
     height: 100%;
     justify-content: space-evenly;
@@ -84,7 +84,7 @@ body {
     flex-direction: column;
 }
 
-.main .column1 .boredomLevel {
+.mainHome .column1 .boredomLevel {
     width: 60%;
     padding: 2px;
     border: 1px solid #ccc;
@@ -92,7 +92,7 @@ body {
     resize: vertical;
 }
 
-.main .column1 .doneButton {
+.mainHome .column1 .doneButton {
     background-color: #008CBA;
     font-size: 20px;
     border-radius: 12px;
@@ -106,11 +106,11 @@ body {
     color: white;
   }
     
-.main .column1 label {
+.mainHome .column1 label {
     font-size: 20px;
 }
 
-.main .column2 {
+.mainHome .column2 {
     width: 35%;
     height: 100%;
     justify-content: center;
@@ -118,7 +118,7 @@ body {
     padding: 150px 10px;
 }
 
-.main .column3 {
+.mainHome .column3 {
     width: 35%;
     height: 100%;
     justify-content: center;
@@ -154,6 +154,46 @@ body {
     font-size: 30px;
     text-align: center;
     text-shadow: #666;
+}
+
+/*------------------------------------------------List of Games tab of the website----------------------------------------------------*/
+.listOfGamesBody{
+    background: #f895fa;
+    height: 100%;
+    width: 100%;
+}
+
+h2{
+    text-align: center;
+}
+
+.listOfGames {
+    padding: 10px;
+    text-align: left;
+    margin: 20px;
+}
+
+.listOfGames ol {
+    font-size: 24px; 
+    margin: 0;
+    padding: 0;
+  }
+  
+ 
+.listOfGames li {
+    margin: 10px 0; 
+}
+  
+ 
+.listOfGames a {
+    color: #3300cc;
+    text-decoration: none;
+}
+  
+
+.listOfGames a:hover {
+    text-decoration: underline;
+    color: #003366;
 }
   
 

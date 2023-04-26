@@ -1,3 +1,17 @@
+//-----------------------------------------------------------Red Button Function--------------------------------------------------------------
+var randomlinks = [];
+
+ randomlinks[0]="TicTacToeGame.html"
+ randomlinks[1]="MemoryGame.html"
+ //randomlinks[2]=""
+ //randomlinks[3]=""
+ 
+function randomlink() {
+  window.location.href = randomlinks[Math.floor(Math.random() * randomlinks.length)];
+}
+
+//-----------------------------------------------------------Game Functions--------------------------------------------------------------
+
 const selectBox = document.querySelector(".select-box"),
 selectBtnX = selectBox.querySelector(".options .playerX"),
 selectBtnO = selectBox.querySelector(".options .playerO"),
@@ -111,17 +125,19 @@ function selectWinner(){
 
 replayBtn.onclick = ()=>{
     window.location.reload();
-}
+} 
 
-//For the red button function
-var randomlinks = [];
+//-----------------------------------------------------------Toggle Button Menu--------------------------------------------------------------
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
- randomlinks[0]="MemoryGame.html"
- //randomlinks[2]=""
- //randomlinks[3]=""
- 
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
 
- function randomlink(){
-  window.open(randomlinks[Math.floor(Math.random()*randomlinks.length)]);
-}
-
+const doneButton = document.getElementById("doneButton");
+doneButton.addEventListener('click', () => {
+  const selectElement = document.querySelector('.boredomLevel');
+  const selectedValue = selectElement.value;
+  alert(`${selectedValue}.`);
+});

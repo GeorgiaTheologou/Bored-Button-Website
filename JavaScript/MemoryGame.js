@@ -1,9 +1,23 @@
+
+//-----------------------------------------------------------Red Button Function--------------------------------------------------------------
+var randomlinks = [];
+
+ randomlinks[0]="TicTacToeGame.html"
+ randomlinks[1]="MemoryGame.html"
+ //randomlinks[2]=""
+ //randomlinks[3]=""
+ 
+function randomlink() {
+  window.location.href = randomlinks[Math.floor(Math.random() * randomlinks.length)];
+}
+
+//-----------------------------------------------------------Game Functions--------------------------------------------------------------
 const cards = document.querySelectorAll(".card"),
 timeTag = document.querySelector(".time b"),
 flipsTag = document.querySelector(".flips b"),
 refreshBtn = document.querySelector(".details button");
 
-let maxTime = 20;
+let maxTime = 35;
 let timeLeft = maxTime;
 let flips = 0;
 let matchedCard = 0;
@@ -80,7 +94,7 @@ function shuffleCard() {
         card.classList.remove("flip");
         let imgTag = card.querySelector(".back-view img");
         setTimeout(() => {
-            imgTag.src = `images/img-${arr[index]}.png`;
+            imgTag.src = `Images/card${arr[index]}.png`;
         }, 500);
         card.addEventListener("click", flipCard);
     });
@@ -94,15 +108,18 @@ cards.forEach(card => {
     card.addEventListener("click", flipCard);
 });
 
-//For the red button function
-var randomlinks = [];
+//-----------------------------------------------------------Toggle Button Menu--------------------------------------------------------------
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
- randomlinks[0]="TicTacToeGame.html"
- //randomlinks[1]=""
- //randomlinks[2]=""
- //randomlinks[3]=""
- 
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
 
- function randomlink(){
-  window.open(randomlinks[Math.floor(Math.random()*randomlinks.length)]);
-}
+const doneButton = document.getElementById("doneButton");
+doneButton.addEventListener('click', () => {
+  const selectElement = document.querySelector('.boredomLevel');
+  const selectedValue = selectElement.value;
+  alert(`${selectedValue}.`);
+});
+

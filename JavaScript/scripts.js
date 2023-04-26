@@ -13,16 +13,15 @@ doneButton.addEventListener('click', () => {
   alert(`${selectedValue}.`);
 });
 
-//-----------------------------------------------------------Rn Menu--------------------------------------------------------------
+//-----------------------------------------------------------Red Button Function--------------------------------------------------------------
 var randomlinks = [];
 
  randomlinks[0]="TicTacToeGame.html"
- //randomlinks[1]=""
+ randomlinks[1]="MemoryGame.html"
  //randomlinks[2]=""
  //randomlinks[3]=""
  
-
- function randomlink(){
-  window.open(randomlinks[Math.floor(Math.random()*randomlinks.length)]);
+function randomlink() {
+  window.location.href = randomlinks[Math.floor(Math.random() * randomlinks.length)];
 }
 

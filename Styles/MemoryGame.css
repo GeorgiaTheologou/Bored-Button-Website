@@ -1,79 +1,306 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-
-
-/*-----------------------------------------------------------NavBar styles-----------------------------------------------------------------*/
-.navbar {
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: rgb(0, 0, 0);
-}
-
-.brand-title {
-    font-size: 1.5rem;
-    margin: .5rem;
-    color: aliceblue;
-}
-
-.navbar-links {
-    height: 100%;
-}
-
-.navbar-links ul {
-    display: flex;
+*{
     margin: 0;
     padding: 0;
-}
-
-.navbar-links li {
-    list-style: none;
-}
-
-.navbar-links li a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    padding: 1rem;
-}
-
-.navbar-links li:hover {
-  background-color: #52c8df;
-}
-
-/*Change button on Menu*/
-.changeGameButton {
-  background-color: #f44336;
-  color: aliceblue; 
-  border: 2px solid #f44336;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  text-decoration: solid;
-}
-
-.changeGameButton:hover {
-  background-color: #c60b0b;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
   
+  /*-----------------------------------------------------------NavBar styles-----------------------------------------------------------------*/
+  .navbar {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      color: rgb(0, 0, 0);
+  }
+  
+  .brand-title {
+      font-size: 1.5rem;
+      margin: .5rem;
+      color: aliceblue;
+  }
+  
+  .navbar-links {
+      height: 100%;
+  }
+  
+  .navbar-links ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+  }
+  
+  .navbar-links li {
+      list-style: none;
+  }
+  
+  .navbar-links li a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      padding: 1rem;
+  }
+  
+  .navbar-links li:hover {
+    background-color: #52c8df;
+  }
+  
+  /*Change button on Menu*/
+  .changeGameButton {
+    background-color: #f44336;
+    color: aliceblue; 
+    border: 2px solid #f44336;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    text-decoration: solid;
+  }
+  
+  .changeGameButton:hover {
+    background-color: #c60b0b;
+    
+  }
+  
+  /*toggle button for menu*/
+  .toggle-button {
+      position: absolute;
+      top: .75rem;
+      right: 1rem;
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 21px;
+  }
+  
+  .toggle-button .bar {
+      height: 3px;
+      width: 100%;
+      background-color: white;
+      border-radius: 10px;
+  }
+
+/*-----------------------------------------------------------Game section-----------------------------------------------------------------*/
+p{
+  font-size: 20px;
 }
 
-/*toggle button for menu*/
-
-.toggle-button {
-    position: absolute;
-    top: .75rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
+body .GameSection{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #ffb342;
 }
 
-.toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
+::selection{
+  color: #fff;
+  background: #ffb342;
+}
+
+.wrapper{
+  padding: 25px;
+  background: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.cards, .card, .view, .details, p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards{
+  height: 350px;
+  width: 350px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cards .card{
+  cursor: pointer;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  height: calc(100% / 4 - 10px);
+  width: calc(100% / 4 - 10px);
+}
+
+.card.shake{
+  animation: shake 0.35s ease-in-out;
+}
+
+/*For the cards to turn*/
+@keyframes shake {
+  0%, 100%{
+    transform: translateX(0);
+  }
+  20%{
+    transform: translateX(-13px);
+  }
+  40%{
+    transform: translateX(13px);
+  }
+  60%{
+    transform: translateX(-8px);
+  }
+  80%{
+    transform: translateX(8px);
+  }
+}
+
+.cards .card .view{
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  background: #fff;
+  border-radius: 7px;
+  backface-visibility: hidden;
+  transition: transform 0.25s linear;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.card .front-view img{
+  max-width: 17px;
+}
+
+.card .back-view{
+  transform: rotateY(-180deg);
+}
+
+.card .back-view img{
+  max-width: 40px;
+}
+
+.card.flip .front-view{
+  transform: rotateY(180deg);
+}
+
+.card.flip .back-view{
+  transform: rotateY(0);
+}
+
+.details{
+  width: 100%;
+  margin-top: 15px;
+  padding: 0 20px;
+  border-radius: 7px;
+  background: #fff;
+  height: calc(100% / 4 - 30px);
+  justify-content: space-between;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.details p{
+  font-size: 18px;
+  height: 17px;
+  padding-right: 18px;
+  border-right: 1px solid #ccc;
+}
+
+.details p span{
+  margin-left: 8px;
+}
+
+.details p b{
+  font-weight: 500;
+}
+
+.details button{
+  cursor: pointer;
+  font-size: 14px;
+  color: #c57d01;
+  border-radius: 4px;
+  padding: 4px 11px;
+  background: #fff;
+  border: 2px solid  #ffb342;
+  transition: 0.3s ease;
+}
+
+.details button:hover{
+  color: #fff;
+  background:  #ffb342;
+}
+
+
+/*-------------------------------------------Media Queries to handle different screen types---------------------------------------------------*/
+@media (max-width: 800px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .toggle-button {
+      display: flex;
+  }
+
+  .navbar-links {
+      display: none;
+      width: 100%;
+  }
+
+  .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+  }
+
+  .navbar-links ul li {
+      text-align: center;
+  }
+
+  .navbar-links ul li a {
+      padding: .5rem 1rem;
+  }
+
+  .navbar-links.active {
+      display: flex;
+  }
+}
+
+/*For smaller screens, media queries for the game section*/
+@media screen and (max-width: 700px) {
+  .cards{
+    height: 350px;
+    width: 350px;
+  }
+  .card .front-view img{
+    max-width: 16px;
+  }
+  .card .back-view img{
+    max-width: 40px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .cards{
+    height: 300px;
+    width: 300px;
+  }
+  .card .back-view img{
+    max-width: 35px;
+  }
+  .details{
+    margin-top: 10px;
+    padding: 0 15px;
+    height: calc(100% / 4 - 20px);
+  }
+  .details p{
+    height: 15px;
+    font-size: 17px;
+    padding-right: 13px;
+  }
+  .details button{
+    font-size: 13px;
+    padding: 5px 10px;
+    border: none;
+    color: #fff;
+    background:  #ffb342;
+  }
 }
