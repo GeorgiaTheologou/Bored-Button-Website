@@ -1,11 +1,3 @@
-//-----------------------------------------------------------Toggle Button Menu--------------------------------------------------------------
-const toggleButton = document.getElementsByClassName('toggle-button')[0]
-const navbarLinks = document.getElementsByClassName('navbar-links')[0]
-
-toggleButton.addEventListener('click', () => {
-  navbarLinks.classList.toggle('active')
-})
-
 //-----------------------------------------------------------Done Button at column 1--------------------------------------------------------------
 const doneButton = document.getElementById("doneButton");
 doneButton.addEventListener('click', () => {
