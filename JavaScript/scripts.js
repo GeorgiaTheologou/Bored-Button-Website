@@ -6,6 +6,7 @@ toggleButton.addEventListener('click', () => {
   navbarLinks.classList.toggle('active')
 })
 
+//-----------------------------------------------------------Done Button at column 1--------------------------------------------------------------
 const doneButton = document.getElementById("doneButton");
 doneButton.addEventListener('click', () => {
   const selectElement = document.querySelector('.boredomLevel');
@@ -18,7 +19,7 @@ var randomlinks = [];
 
  randomlinks[0]="TicTacToeGame.html"
  randomlinks[1]="MemoryGame.html"
- //randomlinks[2]=""
+ randomlinks[2]="GuessTheNumberGame.html"
  //randomlinks[3]=""
  
 function randomlink() {

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number Game</title>
+    <link rel="stylesheet" href="Styles/GuessTheNumberGame.css">
+</head>
+
+  <body>
+
+    <!----NavBar-->
+    <nav class="navbar">
+        <div class="brand-title">Bored Button</div>
+         <a href="#" class="toggle-button">
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+         </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ListOfGames.html">List of Games</a></li>
+            <li><a href="#">About</a></li>
+            <button onclick="randomlink()" class="changeGameButton" style="vertical-align:middle"><span>Change Game </span></button>
+          </ul>
+        </div>
+    </nav>
+
+    <!---Game Section--->
+    <h1>Number Guessing Game</h1>
+    <p>Guess a number between 1 and 100:</p>
+    <input type="text" id="guess">
+
+    <div class="buttons">
+      <button onclick="checkGuess()">Submit Guess</button>
+      <button onclick="location.reload()">Refresh Game</button>
+    </div>
+
+
+    <p id="result"></p>
+    <p id="tries"></p>
+    
+  <script src="JavaScript/GuessTheNumberGame.js"></script>
+
+</body>
+</html>
+

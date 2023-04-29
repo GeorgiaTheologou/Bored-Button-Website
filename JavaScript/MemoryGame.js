@@ -3,7 +3,7 @@
 var randomlinks = [];
 
  randomlinks[0]="TicTacToeGame.html"
- randomlinks[1]="MemoryGame.html"
+ randomlinks[1]="GuessTheNumberGame.html"
  //randomlinks[2]=""
  //randomlinks[3]=""
  
@@ -116,10 +116,4 @@ toggleButton.addEventListener('click', () => {
   navbarLinks.classList.toggle('active')
 })
 
-const doneButton = document.getElementById("doneButton");
-doneButton.addEventListener('click', () => {
-  const selectElement = document.querySelector('.boredomLevel');
-  const selectedValue = selectElement.value;
-  alert(`${selectedValue}.`);
-});
 
