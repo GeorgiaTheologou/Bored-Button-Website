@@ -75,6 +75,7 @@ body {
     flex-grow: 1;
 }
 
+/*Column 1*/
 .mainHome .column1 {
     width: 35%;
     height: 100%;
@@ -99,31 +100,26 @@ body {
     color: aliceblue;
     margin-top: 10px;
     border: 2px solid #9de3fa; 
+    cursor: pointer;
 }
 
-.doneButton:hover {
-    background-color:  #9de3fa; 
-    color: white;
+.mainHome .column1 .doneButton:hover {
+    background-color:  #f6f8f8; 
+    color: rgb(51, 5, 157);
   }
     
 .mainHome .column1 label {
     font-size: 20px;
 }
 
+/*Column 2*/
 .mainHome .column2 {
     width: 35%;
     height: 100%;
     justify-content: center;
     text-align: center;
     padding: 150px 10px;
-}
-
-.mainHome .column3 {
-    width: 35%;
-    height: 100%;
-    justify-content: center;
-    text-align: center;
-    padding: 150px 10px;
+    align-items: center;
 }
 
 /*Red Button Styling*/
@@ -137,6 +133,7 @@ body {
     width: 200px;
     height: 200px;
     box-shadow: 0 9px #a3a3a3;
+    cursor: pointer;
 }
 
 .boredButton:hover {
@@ -155,6 +152,34 @@ body {
     text-align: center;
     text-shadow: #666;
 }
+
+/*Column 3*/
+.mainHome .column3 {
+    width: 35%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 150px 10px;
+}
+
+.mainHome .column3 img{
+    border: 1px solid #000000;
+}
+
+.mainHome .column3 img:hover {
+    transform: scaleX(-1);
+}
+
+.mainHome .column3 .text {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    text-align: center;
+    text-decoration-line: underline;
+    text-decoration-color: red;
+    text-decoration-style: wavy;
+}
+
 
 /*------------------------------------------------List of Games tab of the website----------------------------------------------------*/
 .listOfGamesBody{
@@ -230,3 +255,39 @@ h2{
         display: flex;
     }
 }
+
+@media (max-width: 1000px) {
+    .mainHome {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mainHome .column3 img {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .mainHome .column2 button {
+        height: 200px;
+        width: 200px;
+        font-size: 100%;
+    }   
+
+    .mainHome .column1,
+    .mainHome .column2,
+    .mainHome .column3 {
+        padding: 30px 0px;  
+        width: 100%; 
+    }
+
+    .mainHome .column2 {
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+
+}
+
+
