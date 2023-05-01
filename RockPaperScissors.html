@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memory Card Game</title>
-    <link rel="stylesheet" href="Styles/MemoryGame.css">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="Styles/RockPaperScissors.css">
 </head>
 
 <body>
@@ -34,14 +34,28 @@
       <h1>Rock Paper Scissors Game</h1>
 
       <div class="choices">
-        <button class="btn" id="rock">Rock</button>
-        <button class="btn" id="paper">Paper</button>
-        <button class="btn" id="scissors">Scissors</button>
+
+        <div class="choice1">
+          <p class="logo">🪨</p>
+          <button class="btn" id="rock">Rock</button>
+        </div>
+
+        <div class="choice2">
+          <p class="logo">📃</p>
+          <button class="btn" id="paper">Paper</button>
+        </div>
+
+        </div class="choice3">
+          <p class="logo">✂️</p>
+          <button class="btn" id="scissors">Scissors</button>
+        </div>
+
       </div>
 
     <div id="result"></div>
-    
-    <button class="btn" id="reset">Reset</button>
+
+    <button class="btn" id="restart">Reset</button>
+    <button class="btn" id="Results">Results</button>
    
     <script src="JavaScript/RockPaperScissors.js"></script>
     <script src="JavaScript/ToggleMenu.js"></script>

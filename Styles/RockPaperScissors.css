@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /*-----------------------------------------------------------NavBar styles-----------------------------------------------------------------*/
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#333;
+    color: rgb(0, 0, 0);
+}
+  
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+    color: aliceblue;
+}
+  
+.navbar-links {
+    height: 100%;
+}
+  
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+  
+.navbar-links li {
+    list-style: none;
+}
+  
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+  
+.navbar-links li:hover {
+    background-color: #52c8df;
+}
+  
+/*Change button on Menu*/
+.changeGameButton {
+    background-color: #f44336;
+    color: aliceblue; 
+    border: 2px solid #f44336;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    text-decoration: solid;
+}
+  
+.changeGameButton:hover {
+    background-color: #c60b0b;
+    
+}
+  
+/*toggle button for menu*/
+  
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+  
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+  
+/*-----------------------------------------------------------Game styles-------------------------------------------------------*/
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .choice1,
+  .choice2,
+  .choice3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .choice1:hover,
+  .choice2:hover,
+  .choice3:hover {
+    transform: scale(1.05);
+  }
+  
+  .btn {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    border: none;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .btn:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .logo {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  #result {
+    font-size: 2rem;
+    margin: 2rem 0;
+  }
+  
+  #restart {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    border: none;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  #restart:hover {
+    background-color: #f2f2f2;
+  }
+  
+  
+
+/*-------------------------------------------Media Queries to handle different screen types---------------------------------------------------*/
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+  
+    .toggle-button {
+        display: flex;
+    }
+  
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+  
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .navbar-links ul li {
+        text-align: center;
+    }
+  
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+  
+    .navbar-links.active {
+        display: flex;
+    }
+}
