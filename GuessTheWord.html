@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Word</title>
+    <link rel="stylesheet" href="Styles/GuessTheWord.css">
+</head>
+
+<body>
+
+    <!----NavBar-->
+    <nav class="navbar">
+        <div class="brand-title">Bored Button</div>
+         <a href="#" class="toggle-button">
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+         </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ListOfGames.html">List of Games</a></li>
+            <li><a href="#">About</a></li>
+            <button onclick="randomlink()" class="changeGameButton" style="vertical-align:middle"><span>Change Game </span></button>
+          </ul>
+        </div>
+    </nav>
+
+    <!--Game Section-->
+    <body>
+
+      <div id="game">
+
+        <h1>Word Guessing Game</h1>
+        <h2>Guess the music instrument:</h2>
+
+        <p id="word"></p>
+        <p id="message"></p>
+
+        <input type="text" id="letter">
+
+        <button id="guess">Guess</button>
+        <button id="new-word">New Word</button>
+
+      </div>
+
+    <script src="JavaScript/GuessTheWord.js"></script>
+    <script src="JavaScript/ToggleMenu.js"></script>
+
+    </body>
+</html>
