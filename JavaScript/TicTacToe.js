@@ -3,7 +3,7 @@ var randomlinks = [];
 
  randomlinks[0]="MemoryGame.html"
  randomlinks[1]="GuessTheNumberGame.html"
- //randomlinks[2]=""
+ randomlinks[2]="RockPaperScissors.html"
  //randomlinks[3]=""
  
 function randomlink() {

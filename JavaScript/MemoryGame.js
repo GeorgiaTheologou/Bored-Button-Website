@@ -4,7 +4,7 @@ var randomlinks = [];
 
  randomlinks[0]="TicTacToeGame.html"
  randomlinks[1]="GuessTheNumberGame.html"
- //randomlinks[2]=""
+ randomlinks[2]="RockPaperScissors.html"
  //randomlinks[3]=""
  
 function randomlink() {

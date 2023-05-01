@@ -12,7 +12,7 @@ var randomlinks = [];
  randomlinks[0]="TicTacToeGame.html"
  randomlinks[1]="MemoryGame.html"
  randomlinks[2]="GuessTheNumberGame.html"
- //randomlinks[3]=""
+ randomlinks[3]="RockPaperScissors.html"
  
 function randomlink() {
   window.location.href = randomlinks[Math.floor(Math.random() * randomlinks.length)];

@@ -3,7 +3,7 @@ var randomlinks = [];
 
  randomlinks[0]="TicTacToeGame.html"
  randomlinks[1]="GuessTheNumberGame.html"
- //randomlinks[2]=""
+ randomlinks[2]="MemoryGame.html"
  //randomlinks[3]=""
  
 function randomlink() {
@@ -11,74 +11,83 @@ function randomlink() {
 }
 
 //-----------------------------------------------------------Game Functions--------------------------------------------------------------
-
-// Store the player and computer scores
-let playerScore = 0;
+// Define variables to keep track of the score
+let userScore = 0;
 let computerScore = 0;
 
-// Get the buttons and result element
-const buttons = document.querySelectorAll('.btn');
-const resultDiv = document.querySelector('#result');
-
-// Function to generate a computer choice
+// Define a function to generate a random choice for the computer
 function computerPlay() {
-  const choices = ['rock', 'paper', 'scissors'];
-  const randomIndex = Math.floor(Math.random() * 3);
+  const choices = ["rock", "paper", "scissors"];
+  const randomIndex = Math.floor(Math.random() * choices.length);
   return choices[randomIndex];
 }
 
-// Function to play a round of the game
+// Define a function to play a single round of the game
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
-    return 'Tie!';
+    return "It's a tie!";
   } else if (
-    (playerSelection === 'rock' && computerSelection === 'scissors') ||
-    (playerSelection === 'paper' && computerSelection === 'rock') ||
-    (playerSelection === 'scissors' && computerSelection === 'paper')
+    (playerSelection === "rock" && computerSelection === "scissors") ||
+    (playerSelection === "paper" && computerSelection === "rock") ||
+    (playerSelection === "scissors" && computerSelection === "paper")
   ) {
-    playerScore++;
-    return `You win! ${playerSelection} beats ${computerSelection}`;
+    userScore++;
+    return "You win!";
   } else {
     computerScore++;
-    return `You lose! ${computerSelection} beats ${playerSelection}`;
+    return "You lose!";
   }
 }
 
-// Function to update the result element with the current scores
-function updateResult() {
-  resultDiv.textContent = `Player: ${playerScore}, Computer: ${computerScore}`;
+// Define a function to update the result message and the score
+function updateResultMessage(message) {
+  const resultDiv = document.getElementById("result");
+  resultDiv.textContent = message;
+  resultDiv.style.fontSize = "24px";
 }
 
-// Function to restart the game
-function restartGame() {
-  playerScore = 0;
+// Define a function to show the results
+function showResults() {
+  alert(`Your score: ${userScore} | Computer score: ${computerScore}`);
+}
+
+// Attach event listeners to the buttons
+const rockBtn = document.getElementById("rock");
+rockBtn.addEventListener("click", () => {
+  const computerSelection = computerPlay();
+  const result = playRound("rock", computerSelection);
+  updateResultMessage("You chose rock, computer chose "+ computerSelection + " = " + result);
+});
+
+const paperBtn = document.getElementById("paper");
+paperBtn.addEventListener("click", () => {
+  const computerSelection = computerPlay();
+  const result = playRound("paper", computerSelection);
+  updateResultMessage("You chose paper, computer chose "+ computerSelection + " = " + result);
+});
+
+const scissorsBtn = document.getElementById("scissors");
+scissorsBtn.addEventListener("click", () => {
+  const computerSelection = computerPlay();
+  const result = playRound("scissors", computerSelection);
+  updateResultMessage("You chose scissors, computer chose "+ computerSelection + " = " + result);
+});
+
+// Define a function to reset the game
+function resetGame() {
+  userScore = 0;
   computerScore = 0;
-  updateResult();
+  updateResultMessage("");
 }
 
-// Add event listeners to the buttons
-buttons.forEach((button) =>
-  button.addEventListener('click', () => {
-    const computerSelection = computerPlay();
-    const playerSelection = button.id;
-    const result = playRound(playerSelection, computerSelection);
-    resultDiv.textContent = result;
-    updateResult();
-  })
-);
+// Event Listener for the reset button
+const restartBtn = document.getElementById("restart");
+restartBtn.addEventListener("click", resetGame);
 
-// Add event listener to the restart button
-const restartBtn = document.querySelector('#restart');
-restartBtn.addEventListener('click', () => {
-  restartGame();
-  buttons.forEach((button) => (button.disabled = false));
-});
-
-// Add event listener to the Results button
-const resultsBtn = document.querySelector('#Results');
-resultsBtn.addEventListener('click', () => {
-  resultDiv.textContent = `Player: ${playerScore}, Computer: ${computerScore}`;
-});
+//Event Listener for the result button
+const resultsBtn = document.getElementById("Results");
+resultsBtn.addEventListener("click", showResults);
+ 
 
 
 
