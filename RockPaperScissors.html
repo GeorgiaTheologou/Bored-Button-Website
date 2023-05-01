@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" href="Styles/MemoryGame.css">
+</head>
+
+<body>
+
+    <!----NavBar-->
+    <nav class="navbar">
+        <div class="brand-title">Bored Button</div>
+         <a href="#" class="toggle-button">
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+         </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ListOfGames.html">List of Games</a></li>
+            <li><a href="#">About</a></li>
+            <button onclick="randomlink()" class="changeGameButton" style="vertical-align:middle"><span>Change Game </span></button>
+          </ul>
+        </div>
+    </nav>
+
+    <!--Game Section-->
+    <body>
+
+      <h1>Rock Paper Scissors Game</h1>
+
+      <div class="choices">
+        <button class="btn" id="rock">Rock</button>
+        <button class="btn" id="paper">Paper</button>
+        <button class="btn" id="scissors">Scissors</button>
+      </div>
+
+    <div id="result"></div>
+    
+    <button class="btn" id="reset">Reset</button>
+   
+    <script src="JavaScript/RockPaperScissors.js"></script>
+    <script src="JavaScript/ToggleMenu.js"></script>
+
+</body>
+</html>

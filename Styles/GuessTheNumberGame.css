@@ -149,6 +149,7 @@ p#result {
     .navbar-links ul {
         width: 100%;
         flex-direction: column;
+        align-items: center;
     }
   
     .navbar-links ul li {

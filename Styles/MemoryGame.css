@@ -85,9 +85,6 @@
   }
 
 /*-----------------------------------------------------------Game section-----------------------------------------------------------------*/
-p{
-  font-size: 20px;
-}
 
 body .GameSection{
   display: flex;
@@ -95,6 +92,19 @@ body .GameSection{
   justify-content: center;
   min-height: 100vh;
   background: #ffb342;
+  flex-direction: column;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  max-width: 800px
+}
+
+.instructions p{
+  text-align: center;
 }
 
 ::selection{
@@ -249,6 +259,7 @@ body .GameSection{
   .navbar-links ul {
       width: 100%;
       flex-direction: column;
+      align-items: center;
   }
 
   .navbar-links ul li {
@@ -276,9 +287,27 @@ body .GameSection{
   .card .back-view img{
     max-width: 40px;
   }
+
+  .instructions {
+    font-size: 0.8em;
+  }
+
+  .instructions h1 {
+    font-size: 1.5em;
+  }
 }
 
 @media screen and (max-width: 530px) {
+  .instructions {
+    font-size: 0.6em;
+  }
+  .instructions h1 {
+    font-size: 1.6em;
+  }
+  .instructions p {
+    font-size: 1.3em;
+  }
+  
   .cards{
     height: 300px;
     width: 300px;
@@ -304,3 +333,6 @@ body .GameSection{
     background:  #ffb342;
   }
 }
+
+
+
