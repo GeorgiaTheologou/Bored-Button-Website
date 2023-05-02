@@ -12,7 +12,7 @@ function randomlink() {
 
 //-----------------------------------------------------------Game Functions--------------------------------------------------------------
 // Define an array of possible words
-const words = ["guitar", "piano", "violin", "drums", "trumpet"];
+const words = ["guitar", "piano", "violin", "drums", "trumpet", "flute", "bugle"];
 
 // Choose a random word from the array
 let word = words[Math.floor(Math.random() * words.length)];
