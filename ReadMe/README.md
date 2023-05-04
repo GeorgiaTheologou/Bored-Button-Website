@@ -31,5 +31,15 @@ About Tab:
 ### GitHub Link
 https://github.com/GewrgiaTh/Bored-Button-Website
 
+#### References
+- https://flexbox.malven.co/ (For Layouts)
+- https://www.w3schools.com/howto/howto_css_flip_card.asp (Flip card)
+- https://dev.to/javascriptacademy/create-a-simple-tic-tac-toe-game-using-html-css-javascript-i4k (Used as example for the tic tac toe mini game)
+- https://www.w3schools.com/js/js_random.asp (Random effect)
+- https://www.w3schools.com/css/css3_buttons.asp (Buttons Styling)
+- https://www.w3schools.com/js/js_let.asp (How to use let in JavaScript)
+- https://www.w3schools.com/js/js_intro.asp (More on JavaScript)
+- https://www.youtube.com/watch?v=y8-F5-2EIcg (Animations tutorial video)
+
 
 
